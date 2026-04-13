@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "log_paths": {
+    "cursor": "~/.cursor/hooks-audit.ndjson",
+    "claude": "~/.claude/hooks-audit.ndjson"
+  },
+  "omit_keys": ["user_email"],
+  "redact_key_substrings": [
+    "password",
+    "secret",
+    "token",
+    "authorization",
+    "api_key",
+    "apikey",
+    "credential",
+    "private_key",
+    "session_token"
+  ],
+  "max_string_chars": 8000,
+  "max_record_bytes": 524288
+}
