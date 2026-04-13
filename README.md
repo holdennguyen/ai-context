@@ -275,7 +275,7 @@ Commit the summary; raw run JSON goes in `benchmarks/raw/` (gitignored).
 
 ```bash
 # 1. Clone repo
-git clone <repo-url> ~/ai-context
+git clone https://github.com/holdennguyen/ai-context.git ~/ai-context
 cd ~/ai-context
 
 # 2. Verify ~/.claude/CLAUDE.md imports this repo
