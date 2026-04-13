@@ -7,3 +7,4 @@ benchmarks/raw/*.json
 .env
 # Windows / WSL download markers (NTFS alternate data streams)
 *:Zone.Identifier
+*presentation*
