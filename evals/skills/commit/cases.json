@@ -1,0 +1,39 @@
+[
+  {
+    "id": "feat-with-scope",
+    "prompt": "Commit this change: added OAuth2 PKCE flow to the auth middleware (src/middleware/auth.ts)",
+    "expect": {
+      "format_prefix": "feat(auth):",
+      "max_subject_len": 50,
+      "no_trailing_summary": true,
+      "includes_coauthored": true
+    }
+  },
+  {
+    "id": "fix-no-scope",
+    "prompt": "Commit this fix: corrected null pointer dereference in the user lookup service",
+    "expect": {
+      "format_prefix": "fix(",
+      "max_subject_len": 50,
+      "no_trailing_summary": true
+    }
+  },
+  {
+    "id": "chore-deps",
+    "prompt": "Commit dependency upgrades: bumped axios 1.6 → 1.7, typescript 5.3 → 5.4",
+    "expect": {
+      "format_prefix": "chore(deps):",
+      "max_subject_len": 50,
+      "no_trailing_summary": true
+    }
+  },
+  {
+    "id": "breaking-change",
+    "prompt": "Commit: renamed UserService.getById() to UserService.findById() — callers must update",
+    "expect": {
+      "format_prefix": "refactor(",
+      "contains_breaking": true,
+      "max_subject_len": 50
+    }
+  }
+]

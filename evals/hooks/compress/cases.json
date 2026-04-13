@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bare-git-log-claude",
+    "format": "claude",
+    "input": {"tool_name": "Bash", "tool_input": {"command": "git log", "working_directory": "/tmp"}},
+    "expect": {
+      "command_contains": "--oneline",
+      "working_directory_preserved": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "id": "compound-cd-git-log-cursor",
+    "format": "cursor",
+    "input": {"tool_name": "Shell", "tool_input": {"command": "cd /tmp && git log"}},
+    "expect": {
+      "command_contains": "--oneline",
+      "command_contains_also": "cd /tmp",
+      "exit_code": 0
+    }
+  },
+  {
+    "id": "already-limited-no-rewrite",
+    "format": "claude",
+    "input": {"tool_name": "Bash", "tool_input": {"command": "git log --oneline -5"}},
+    "expect": {
+      "no_rewrite": true,
+      "exit_code": 0,
+      "empty_stdout": true
+    }
+  },
+  {
+    "id": "npm-install-claude",
+    "format": "claude",
+    "input": {"tool_name": "Bash", "tool_input": {"command": "npm install"}},
+    "expect": {
+      "rewrite_applied": true,
+      "exit_code": 0
+    }
+  }
+]

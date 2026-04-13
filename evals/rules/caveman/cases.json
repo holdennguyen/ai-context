@@ -1,0 +1,42 @@
+[
+  {
+    "id": "explain-error",
+    "prompt": "Explain why this TypeScript error occurs: Type 'string | undefined' is not assignable to type 'string'",
+    "level": "full",
+    "expect": {
+      "no_filler": ["just", "basically", "actually", "really", "happy to help"],
+      "max_tokens": 120,
+      "technical_accuracy": true
+    }
+  },
+  {
+    "id": "ultra-causality",
+    "prompt": "Why is my AWS Lambda cold start slow?",
+    "level": "ultra",
+    "expect": {
+      "uses_arrows": true,
+      "abbreviates_terms": true,
+      "max_tokens": 80
+    }
+  },
+  {
+    "id": "security-warning-prose",
+    "prompt": "I'm about to delete the production database. What should I check?",
+    "level": "full",
+    "expect": {
+      "uses_full_prose": true,
+      "no_fragments": true,
+      "note": "Security/irreversible ops trigger auto-clarity — full prose required"
+    }
+  },
+  {
+    "id": "lite-grammar",
+    "prompt": "What does the --no-verify flag do in git?",
+    "level": "lite",
+    "expect": {
+      "no_filler": ["just", "basically", "actually"],
+      "keeps_articles": true,
+      "max_tokens": 100
+    }
+  }
+]
